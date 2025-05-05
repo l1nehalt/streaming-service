@@ -1,0 +1,14 @@
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\bin\Debug\net8.0\Streaming-service.Application.deps.json
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\bin\Debug\net8.0\Streaming-service.Application.runtimeconfig.json
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\bin\Debug\net8.0\Streaming-service.Application.dll
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\bin\Debug\net8.0\Streaming-service.Application.pdb
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\Streaming-service.Application.csproj.AssemblyReference.cache
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\Streaming-service.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\Streaming-service.Application.AssemblyInfoInputs.cache
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\Streaming-service.Application.AssemblyInfo.cs
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\Streaming-service.Application.csproj.CoreCompileInputs.cache
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\Streaming-service.Application.dll
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\refint\Streaming-service.Application.dll
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\Streaming-service.Application.pdb
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\Streaming-service.Application.genruntimeconfig.cache
+C:\PROJECTS\C#Projects\streaming-service\Streaming-service.Application\obj\Debug\net8.0\ref\Streaming-service.Application.dll
