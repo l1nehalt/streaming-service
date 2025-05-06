@@ -273,3 +273,9 @@ D:\Projects\streaming-service\Streaming-service.API\obj\Debug\net8.0\refint\Stre
 D:\Projects\streaming-service\Streaming-service.API\obj\Debug\net8.0\Streaming-service.API.pdb
 D:\Projects\streaming-service\Streaming-service.API\obj\Debug\net8.0\Streaming-service.API.genruntimeconfig.cache
 D:\Projects\streaming-service\Streaming-service.API\obj\Debug\net8.0\ref\Streaming-service.API.dll
+D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\AutoMapper.dll
+D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Application.dll
+D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Domain.dll
+D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Application.pdb
+D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Domain.pdb

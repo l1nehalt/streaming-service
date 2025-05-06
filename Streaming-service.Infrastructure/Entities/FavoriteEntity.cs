@@ -8,5 +8,7 @@ public class FavoriteEntity
     
     public long SongId { get; set; }
     
-    public SongEntity SongEntity { get; set; } = new SongEntity();
+    public SongEntity SongEntity { get; set; }
+    
+    public UserEntity? UserEntity { get; set; } 
 }

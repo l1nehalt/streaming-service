@@ -1,8 +1,9 @@
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Streaming_service.Domain.Abstractions;
 using Streaming_service.Infrastructure.Entities;
-using Streaming_service.Application.Interfaces;
 using Streaming_service.Domain.Models;
+
 
 namespace Streaming_service.Infrastructure.Repositories;
 
@@ -17,11 +18,15 @@ public class UserRepository : IUserRepository
         _mapper = mapper;
     }
     
-    public async Task<List<Favorite>> GetAllFavorites(long userId)
+    public async Task<List<Favorite>> GetFavorites(long userId)
     {
         var favoriteEntities = await _context.Favorites
             .Where(f => f.UserId == userId)
             .Include(f => f.SongEntity)
+            .ThenInclude(f => f.ArtistEntity)
+            .Include(f => f.SongEntity)
+            .ThenInclude(f => f.AlbumEntity)
+            .AsNoTracking()
             .ToListAsync();
             
         return _mapper.Map<List<Favorite>>(favoriteEntities);
@@ -29,9 +34,9 @@ public class UserRepository : IUserRepository
 
     public async Task<Favorite?> AddFavorite(long userId, long songId)
     {
-        var songEntity = await _context.Songs.AsNoTracking()
-            .FirstOrDefaultAsync(s => s.Id == songId);
-
+        var songEntity = await _context.Songs
+            .FindAsync(songId);
+        
         if (songEntity == null)
         {
             return null;
@@ -40,7 +45,8 @@ public class UserRepository : IUserRepository
         var favoriteEntity = new FavoriteEntity
         {
             UserId = userId,
-            SongId = songId
+            SongId = songId,
+            SongEntity = songEntity
         };
         
          await _context.Favorites.AddAsync(favoriteEntity);

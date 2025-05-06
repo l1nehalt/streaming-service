@@ -6,15 +6,14 @@ public class AlbumEntity
     
     public long ArtistId { get; set; }
     
+    public string Title { get; set; } = string.Empty;
+    
     public DateTime ReleaseDate { get; set; }
     
     public string ImagePath { get; set; } = string.Empty;
     
-    public List<SongEntity> Songs { get; set; } = new List<SongEntity>();
+    public List<SongEntity>? SongEntities { get; set; }
     
-    public string Title { get; set; } = string.Empty;
-    
-    public ArtistEntity ArtistEntity { get; set; } = new ArtistEntity();
-    
+    public ArtistEntity? ArtistEntity { get; set; }
     
 }

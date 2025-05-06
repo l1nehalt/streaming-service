@@ -18,7 +18,9 @@ public class SongEntity
     
     public bool IsSingle  { get; set; }
     
-    public ArtistEntity ArtistEntity { get; set; }
+    public List<FavoriteEntity>? FavoritesEntities { get; set; }
     
-    public AlbumEntity AlbumEntity { get; set; }
+    public ArtistEntity? ArtistEntity { get; set; }
+    
+    public AlbumEntity? AlbumEntity { get; set; }
 }
