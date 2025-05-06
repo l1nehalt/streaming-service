@@ -4,7 +4,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming-service.API", "St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming-service.Infrastructure", "Streaming-service.Infrastructure\Streaming-service.Infrastructure.csproj", "{8CE8F69E-B8B9-458C-A7DD-B4D101A6E8B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming-service.Application", "Streaming-service.Application\Streaming-service.Application.csproj", "{AF4A1250-D39D-431C-8CC8-6A4CAC011741}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming-service.Domain", "Streaming-service.Domain\Streaming-service.Domain.csproj", "{F82C09AA-F904-450D-BBF6-9AB9BEF2C38B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Streaming-service.Application", "Streaming-service.Application\Streaming-service.Application.csproj", "{70B28F3D-9BEC-4529-9824-332C98B8E1A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +22,13 @@ Global
 		{8CE8F69E-B8B9-458C-A7DD-B4D101A6E8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CE8F69E-B8B9-458C-A7DD-B4D101A6E8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CE8F69E-B8B9-458C-A7DD-B4D101A6E8B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF4A1250-D39D-431C-8CC8-6A4CAC011741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF4A1250-D39D-431C-8CC8-6A4CAC011741}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF4A1250-D39D-431C-8CC8-6A4CAC011741}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF4A1250-D39D-431C-8CC8-6A4CAC011741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F82C09AA-F904-450D-BBF6-9AB9BEF2C38B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F82C09AA-F904-450D-BBF6-9AB9BEF2C38B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F82C09AA-F904-450D-BBF6-9AB9BEF2C38B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F82C09AA-F904-450D-BBF6-9AB9BEF2C38B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70B28F3D-9BEC-4529-9824-332C98B8E1A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70B28F3D-9BEC-4529-9824-332C98B8E1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70B28F3D-9BEC-4529-9824-332C98B8E1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70B28F3D-9BEC-4529-9824-332C98B8E1A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
