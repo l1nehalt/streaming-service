@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using Streaming_service.Domain.Abstractions;
-using Streaming_service.Domain.Models;
 
 namespace streaming_service.Controllers;
 
