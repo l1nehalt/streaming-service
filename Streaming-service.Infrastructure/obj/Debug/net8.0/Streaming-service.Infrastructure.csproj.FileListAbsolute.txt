@@ -32,3 +32,9 @@ D:\Projects\streaming-service\Streaming-service.Infrastructure\bin\Debug\net8.0\
 D:\Projects\streaming-service\Streaming-service.Infrastructure\bin\Debug\net8.0\Streaming-service.Application.pdb
 D:\Projects\streaming-service\Streaming-service.Infrastructure\bin\Debug\net8.0\Streaming-service.Domain.pdb
 D:\Projects\streaming-service\Streaming-service.Infrastructure\obj\Debug\net8.0\Streamin.4043994C.Up2Date
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Infrastructure\bin\Debug\net8.0\Streaming-service.Application.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Infrastructure\bin\Debug\net8.0\Streaming-service.Domain.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Infrastructure\bin\Debug\net8.0\Streaming-service.Application.pdb
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Infrastructure\bin\Debug\net8.0\Streaming-service.Domain.pdb
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Infrastructure\obj\Debug\net8.0\Streaming-service.Infrastructure.sourcelink.json
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Infrastructure\obj\Debug\net8.0\Streamin.4043994C.Up2Date

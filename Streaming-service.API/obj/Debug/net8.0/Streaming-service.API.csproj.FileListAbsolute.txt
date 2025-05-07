@@ -279,3 +279,10 @@ D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-s
 D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Domain.dll
 D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Application.pdb
 D:\Projects\streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Domain.pdb
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.API\bin\Debug\net8.0\AutoMapper.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Application.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Domain.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Application.pdb
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.API\bin\Debug\net8.0\Streaming-service.Domain.pdb
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.API\obj\Debug\net8.0\Streaming-service.API.sourcelink.json

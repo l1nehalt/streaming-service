@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M/F/VrXObl8=",
+  "dgSpecHash": "DQZES6fMNy8=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\streaming-service\\Streaming-service.Infrastructure\\Streaming-service.Infrastructure.csproj",
+  "projectFilePath": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Infrastructure\\Streaming-service.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexey\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Alexey\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
