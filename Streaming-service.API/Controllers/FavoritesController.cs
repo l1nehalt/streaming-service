@@ -1,23 +1,24 @@
 using Microsoft.AspNetCore.Mvc;
+using Streaming_service.Application.Interfaces;
 using Streaming_service.Domain.Abstractions;
 
 namespace streaming_service.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class UserController : ControllerBase
+public class FavoritesController : ControllerBase
 {
-    private readonly IUserService _userService;
+    private readonly IFavoritesService _favoritesService;
 
-    public UserController(IUserService userService)
+    public FavoritesController(IFavoritesService favoritesService)
     {
-        _userService = userService;
+        _favoritesService = favoritesService;
     }
 
     [HttpGet("favorites/{userId}")]
     public async Task<IActionResult> GetFavorites(long userId)
     {
-        var favorites = await _userService.GetFavoritesAsync(userId);
+        var favorites = await _favoritesService.GetFavoritesAsync(userId);
         
         return Ok(favorites);
     }
@@ -25,7 +26,7 @@ public class UserController : ControllerBase
     [HttpPost("addFavorites/{songId}")]
     public async Task<IActionResult> AddFavorite([FromQuery]long userId, long songId)
     {
-        var favorite = await _userService.AddFavoriteAsync(userId, songId);
+        var favorite = await _favoritesService.AddFavoriteAsync(userId, songId);
 
         if (favorite == null)
         {

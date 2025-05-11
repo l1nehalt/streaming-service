@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Streaming_service.Application.Interfaces;
 using Streaming_service.Application.Services;
 using Streaming_service.Domain.Abstractions;
 using Streaming_service.Infrastructure;
@@ -13,14 +14,17 @@ builder.Services.AddDbContext<StreamingDbContext>(
     });
 
 builder.Services.AddControllers();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<ISongRepository, SongRepository>();
-builder.Services.AddScoped<ISongService, SongService>();
+builder.Services.AddScoped<IFavoritesService, FavoritesService>();
+builder.Services.AddScoped<IFavoritesRepository, FavoritesRepository>();
+builder.Services.AddScoped<ISongsRepository, SongsRepository>();
+builder.Services.AddScoped<ISongsService, SongsService>();
+builder.Services.AddScoped<IAlbumsRepository, AlbumsRepository>();
+builder.Services.AddScoped<ISearchService, SearchService>();
 
 var app = builder.Build();
 

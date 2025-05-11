@@ -10,9 +10,9 @@ public class Album
     
     public string ImagePath { get; set; } = string.Empty;
     
-    public List<Song> Songs { get; set; } = new List<Song>();
-    
     public string Title { get; set; } = string.Empty;
     
-    public Artist Artist { get; set; } = new Artist();
+    public List<Song>? Songs { get; set; }
+    
+    public Artist? Artist { get; set; }
 }

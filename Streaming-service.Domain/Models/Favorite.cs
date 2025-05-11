@@ -9,7 +9,7 @@ public class Favorite
     
     public long SongId { get; set; }
     
-    public Song Song { get; set; }
+    public Song? Song { get; set; }
     
 
     public static Favorite Create(long id, long userId, long songId, Song song)
