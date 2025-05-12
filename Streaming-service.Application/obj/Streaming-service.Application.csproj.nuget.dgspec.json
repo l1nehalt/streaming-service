@@ -1,36 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj": {}
+    "D:\\Projects\\streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj": {}
   },
   "projects": {
-    "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj": {
+    "D:\\Projects\\streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj",
+        "projectUniqueName": "D:\\Projects\\streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj",
         "projectName": "Streaming-service.Application",
-        "projectPath": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj",
+        "projectPath": "D:\\Projects\\streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj",
         "packagesPath": "C:\\Users\\Alexey\\.nuget\\packages\\",
-        "outputPath": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Application\\obj\\",
+        "outputPath": "D:\\Projects\\streaming-service\\Streaming-service.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexey\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Alexey\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj": {
-                "projectPath": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj"
+              "D:\\Projects\\streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj": {
+                "projectPath": "D:\\Projects\\streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj"
               }
             }
           }
@@ -49,16 +46,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -75,29 +62,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj": {
+    "D:\\Projects\\streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj",
         "projectName": "Streaming-service.Domain",
-        "projectPath": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj",
+        "projectPath": "D:\\Projects\\streaming-service\\Streaming-service.Domain\\Streaming-service.Domain.csproj",
         "packagesPath": "C:\\Users\\Alexey\\.nuget\\packages\\",
-        "outputPath": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Domain\\obj\\",
+        "outputPath": "D:\\Projects\\streaming-service\\Streaming-service.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alexey\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Alexey\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -120,16 +104,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[12.0.1, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -146,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

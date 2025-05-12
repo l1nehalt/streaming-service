@@ -1,4 +1,3 @@
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Streaming_service.Domain.Abstractions;
 using Streaming_service.Infrastructure.Entities;
@@ -10,12 +9,10 @@ namespace Streaming_service.Infrastructure.Repositories;
 public class FavoritesRepository : IFavoritesRepository
 {
     private readonly StreamingDbContext _context;
-    private readonly IMapper _mapper;
     
-    public FavoritesRepository(StreamingDbContext context, IMapper mapper) 
+    public FavoritesRepository(StreamingDbContext context) 
     {
         _context = context;
-        _mapper = mapper;
     }
     
     public async Task<List<Favorite>> Get(long userId)
@@ -83,7 +80,61 @@ public class FavoritesRepository : IFavoritesRepository
         
          await _context.Favorites.AddAsync(favoriteEntity);
          await _context.SaveChangesAsync();
+
+         var favorite = new Favorite
+         {
+             Id = favoriteEntity.Id,
+             UserId = favoriteEntity.UserId,
+             SongId = favoriteEntity.SongId,
+             Song = new Song
+             {
+                 Id = favoriteEntity.SongEntity.Id,
+                 AlbumId = favoriteEntity.SongEntity.AlbumId,
+                 ArtistId = favoriteEntity.SongEntity.ArtistId,
+                 Title = favoriteEntity.SongEntity.Title,
+                 FilePath = favoriteEntity.SongEntity.FilePath,
+                 FeaturingArtists = favoriteEntity.SongEntity.FeaturingArtists,
+                 ImagePath = favoriteEntity.SongEntity.ImagePath,
+                 IsSingle = favoriteEntity.SongEntity.IsSingle
+             }
+         };
          
-         return _mapper.Map<Favorite>(favoriteEntity);
+         return favorite;
+    }
+
+    public async Task<Favorite?> Delete(long userId, long songId)
+    {
+        var favoriteEntity = await _context.Favorites
+            .Where(a => a.UserId == userId && a.SongId == songId)
+            .Include(f => f.SongEntity)
+            .FirstOrDefaultAsync();
+        
+        if (favoriteEntity == null)
+        {
+            return null;
+        }
+        
+        _context.Favorites.Remove(favoriteEntity);
+        await _context.SaveChangesAsync();
+
+        var favorite = new Favorite
+        {
+            Id = favoriteEntity.Id,
+            SongId = songId,
+            UserId = userId,
+            Song = new Song
+            {
+                Id = favoriteEntity.SongEntity.Id,
+                AlbumId = favoriteEntity.SongEntity.AlbumId,
+                ArtistId = favoriteEntity.SongEntity.ArtistId,
+                Title = favoriteEntity.SongEntity.Title,
+                FilePath = favoriteEntity.SongEntity.FilePath,
+                FeaturingArtists = favoriteEntity.SongEntity.FeaturingArtists,
+                ImagePath = favoriteEntity.SongEntity.ImagePath,
+                IsSingle = favoriteEntity.SongEntity.IsSingle
+            }
+        };
+        
+        return favorite;
     }
 }

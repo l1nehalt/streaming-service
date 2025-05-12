@@ -1,4 +1,3 @@
-using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Streaming_service.Domain.Abstractions;
 using Streaming_service.Domain.Models;

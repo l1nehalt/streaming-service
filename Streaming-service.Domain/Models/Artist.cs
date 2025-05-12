@@ -11,4 +11,4 @@ public class Artist
     public List<Song>? Songs { get; set; } = [];
 
     public List<Album>? Albums { get; set; } = [];
-}
+}   
