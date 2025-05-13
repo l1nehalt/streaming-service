@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0ZOSZP8n7f4=",
+  "dgSpecHash": "LZbyrDu2GoI=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\streaming-service\\Streaming-service.Infrastructure\\Streaming-service.Infrastructure.csproj",
+  "projectFilePath": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Infrastructure\\Streaming-service.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexey\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Alexey\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

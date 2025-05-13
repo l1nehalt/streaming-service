@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Streaming_service.Domain.Abstractions;
 using Streaming_service.Infrastructure.Entities;
 using Streaming_service.Domain.Models;
+using Streaming_service.Infrastructure.Mappers;
 
 
 namespace Streaming_service.Infrastructure.Repositories;
@@ -26,37 +27,7 @@ public class FavoritesRepository : IFavoritesRepository
             .AsNoTracking()
             .ToListAsync();
 
-        var favorites = favoriteEntities.Select(favoriteEntity => new Favorite
-        {
-            Id = favoriteEntity.Id,
-            UserId = favoriteEntity.UserId,
-            SongId = favoriteEntity.SongEntity.Id,
-            Song = new Song
-            {
-                Id = favoriteEntity.SongEntity.Id,
-                AlbumId = favoriteEntity.SongEntity.AlbumId,
-                ArtistId = favoriteEntity.SongEntity.ArtistId,
-                Title = favoriteEntity.SongEntity.Title,
-                FilePath = favoriteEntity.SongEntity.FilePath,
-                FeaturingArtists = favoriteEntity.SongEntity.FeaturingArtists,
-                ImagePath = favoriteEntity.SongEntity.ImagePath,
-                IsSingle = favoriteEntity.SongEntity.IsSingle,
-                Artist = new Artist
-                {
-                    Id = favoriteEntity.SongEntity.ArtistEntity.Id,
-                    Name = favoriteEntity.SongEntity.ArtistEntity.Name,
-                    ImagePath = favoriteEntity.SongEntity.ArtistEntity.ImagePath,
-                },
-                Album = new Album
-                {
-                    Id = favoriteEntity.SongEntity.AlbumEntity.Id,
-                    ArtistId = favoriteEntity.SongEntity.AlbumEntity.ArtistId,
-                    ReleaseDate = favoriteEntity.SongEntity.AlbumEntity.ReleaseDate,
-                    ImagePath = favoriteEntity.SongEntity.AlbumEntity.ImagePath,
-                    Title = favoriteEntity.SongEntity.AlbumEntity.Title,
-                }
-            }
-        }).ToList();
+        var favorites = favoriteEntities.Select(FavoriteMapper.ToDomain).ToList();
         
         return favorites;
     }

@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Streaming_service.Domain.Models;
 using Streaming_service.Domain.Abstractions;
-using Streaming_service.Infrastructure.Entities;
 using Streaming_service.Infrastructure.Mappers;
 
 namespace Streaming_service.Infrastructure.Repositories;

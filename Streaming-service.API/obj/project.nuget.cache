@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SAn8XNnERdw=",
+  "dgSpecHash": "Ysw8Xhpb3rs=",
   "success": true,
-  "projectFilePath": "D:\\Projects\\streaming-service\\Streaming-service.API\\Streaming-service.API.csproj",
+  "projectFilePath": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\Streaming-service.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexey\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Alexey\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.8\\microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",
