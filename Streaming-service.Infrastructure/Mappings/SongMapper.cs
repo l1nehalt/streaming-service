@@ -1,7 +1,7 @@
 using Streaming_service.Domain.Models;
 using Streaming_service.Infrastructure.Entities;
 
-namespace Streaming_service.Infrastructure.Mappers;
+namespace Streaming_service.Infrastructure.Mappings;
 
 public class SongMapper
 {

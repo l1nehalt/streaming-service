@@ -2,7 +2,6 @@ using Microsoft.EntityFrameworkCore;
 using Streaming_service.Domain.Abstractions;
 using Streaming_service.Infrastructure.Entities;
 using Streaming_service.Domain.Models;
-using Streaming_service.Infrastructure.Mappers;
 
 
 namespace Streaming_service.Infrastructure.Repositories;
@@ -27,7 +26,37 @@ public class FavoritesRepository : IFavoritesRepository
             .AsNoTracking()
             .ToListAsync();
 
-        var favorites = favoriteEntities.Select(FavoriteMapper.ToDomain).ToList();
+        var favorites = favoriteEntities
+            .Select(favorite => new Favorite
+            {
+                Id = favorite.Id,
+                UserId = favorite.UserId,
+                Song = new Song
+                {
+                    Id = favorite.SongEntity.Id,
+                    Title = favorite.SongEntity.Title,
+                    AlbumId = favorite.SongEntity.AlbumId,
+                    ArtistId = favorite.SongEntity.ArtistId,
+                    FilePath = favorite.SongEntity.FilePath,
+                    FeaturingArtists = favorite.SongEntity.FeaturingArtists,
+                    IsSingle = favorite.SongEntity.IsSingle,
+                    ImagePath = favorite.SongEntity.ImagePath,
+                    Artist = new Artist
+                    {
+                        Id = favorite.SongEntity.ArtistEntity.Id,
+                        Name = favorite.SongEntity.ArtistEntity.Name,
+                        ImagePath = favorite.SongEntity.ArtistEntity.ImagePath
+                    },
+                    Album = new Album
+                    {
+                        Id = favorite.SongEntity.AlbumEntity.Id,
+                        Title = favorite.SongEntity.AlbumEntity.Title,
+                        ArtistId = favorite.SongEntity.AlbumEntity.ArtistId,
+                        ImagePath = favorite.SongEntity.AlbumEntity.ImagePath,
+                        ReleaseDate = favorite.SongEntity.AlbumEntity.ReleaseDate,
+                    }
+                }
+            }).ToList();
         
         return favorites;
     }
@@ -55,8 +84,8 @@ public class FavoritesRepository : IFavoritesRepository
          var favorite = new Favorite
          {
              Id = favoriteEntity.Id,
-             UserId = favoriteEntity.UserId,
-             SongId = favoriteEntity.SongId,
+             SongId = songId,
+             UserId = userId,
              Song = new Song
              {
                  Id = favoriteEntity.SongEntity.Id,

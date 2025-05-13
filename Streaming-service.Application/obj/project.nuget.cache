@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mzcrs6jmiD0=",
+  "dgSpecHash": "0quLZtJ0HQM=",
   "success": true,
-  "projectFilePath": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Projects\\streaming-service\\Streaming-service.Application\\Streaming-service.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexey\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\Alexey\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

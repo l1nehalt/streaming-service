@@ -11,17 +11,4 @@ public class Favorite
     
     public Song? Song { get; set; }
     
-
-    public static Favorite Create(long id, long userId, long songId, Song song)
-    {
-        var favorite = new Favorite
-        {
-            Id = id,
-            UserId = userId,
-            SongId = songId,
-            Song = song
-        };
-        
-        return favorite;
-    }
 }
