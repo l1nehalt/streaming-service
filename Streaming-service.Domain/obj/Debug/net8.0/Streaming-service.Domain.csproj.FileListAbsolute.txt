@@ -1,0 +1,13 @@
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\bin\Debug\net8.0\Streaming-service.Domain.deps.json
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\bin\Debug\net8.0\Streaming-service.Domain.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\bin\Debug\net8.0\Streaming-service.Domain.pdb
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\Streaming-service.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\Streaming-service.Domain.AssemblyInfoInputs.cache
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\Streaming-service.Domain.AssemblyInfo.cs
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\Streaming-service.Domain.csproj.CoreCompileInputs.cache
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\Streaming-service.Domain.sourcelink.json
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\Streaming-service.Domain.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\refint\Streaming-service.Domain.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\Streaming-service.Domain.pdb
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\ref\Streaming-service.Domain.dll
+C:\PROJECTS\C#Projects\Streaming-service\Streaming-service.Domain\obj\Debug\net8.0\Streaming-service.Domain.csproj.AssemblyReference.cache

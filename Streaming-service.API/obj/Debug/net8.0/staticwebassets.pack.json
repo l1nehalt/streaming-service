@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\2hollis - jeans.mp3",
+      "PackagePath": "staticwebassets\\Songs\\2hollis - jeans.mp3"
+    },
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\YUNGWAY - 1HP.mp3",
+      "PackagePath": "staticwebassets\\Songs\\YUNGWAY - 1HP.mp3"
+    },
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\YUNGWAY, OG Buda - Изобилие.mp3",
+      "PackagePath": "staticwebassets\\Songs\\YUNGWAY, OG Buda - Изобилие.mp3"
+    },
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\convolk - do 2 much.mp3",
+      "PackagePath": "staticwebassets\\Songs\\convolk - do 2 much.mp3"
+    },
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\convolk - medicine.mp3",
+      "PackagePath": "staticwebassets\\Songs\\convolk - medicine.mp3"
+    },
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\convolk - swear to god.mp3",
+      "PackagePath": "staticwebassets\\Songs\\convolk - swear to god.mp3"
+    },
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\saluki - огней.mp3",
+      "PackagePath": "staticwebassets\\Songs\\saluki - огней.mp3"
+    },
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\saluki, boulevard depo - brotha.mp3",
+      "PackagePath": "staticwebassets\\Songs\\saluki, boulevard depo - brotha.mp3"
+    },
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\Платина feat. Feduk - Ламбо.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Платина feat. Feduk - Ламбо.mp3"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Streaming-service.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Streaming-service.API.props",
+      "PackagePath": "build\\Streaming-service.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Streaming-service.API.props",
+      "PackagePath": "buildMultiTargeting\\Streaming-service.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Streaming-service.API.props",
+      "PackagePath": "buildTransitive\\Streaming-service.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
