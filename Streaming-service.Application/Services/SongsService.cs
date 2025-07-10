@@ -43,6 +43,7 @@ public class SongsService : ISongsService
         
         var listAlbumsResponse = albums.Select(albumResponse => new AlbumResponse
         {
+            AlbumId = albumResponse.Id,
             Title = albumResponse.Title,
             ArtistName = albumResponse.Artist.Name,
             ImagePath = albumResponse.ImagePath,
@@ -57,5 +58,30 @@ public class SongsService : ISongsService
         }).ToList();
         
         return listAlbumsResponse;
+    }
+
+    public async Task<AlbumResponse> GetAlbumByIdAsync(int albumId)
+    {
+        var album = await _albumsRepository.GetById(albumId);
+
+        if (album == null) return AlbumResponse.Failure("Album not found");
+
+        var albumResponse  = new AlbumResponse
+        {
+            AlbumId = album.Id,
+            Title = album.Title,
+            ArtistName = album.Artist.Name,
+            ImagePath = album.ImagePath,
+            Songs = album.Songs.Select(songResponse => new SongResponse
+            {
+                Title = songResponse.Title,
+                ArtistName = songResponse.Artist.Name,
+                AlbumTitle = songResponse.Album.Title,
+                FilePath = songResponse.FilePath,
+                ImagePath = songResponse.ImagePath
+            }).ToList()
+        };
+        
+        return albumResponse;
     }
 }

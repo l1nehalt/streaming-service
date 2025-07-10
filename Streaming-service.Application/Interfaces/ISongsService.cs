@@ -8,4 +8,6 @@ public interface ISongsService
     Task<List<SongResponse>> GetSongsAsync();
     
     Task<List<AlbumResponse>> GetAlbumsAsync();
+
+    Task<AlbumResponse> GetAlbumByIdAsync(int albumId);
 }

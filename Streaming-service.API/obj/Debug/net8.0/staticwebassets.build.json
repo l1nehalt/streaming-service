@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ldKQYuSRPDb/syp0wvGpP9bQ2PVeiN0qg0rQWLNpjWc=",
+  "Hash": "ifbeCLIiVVlosSoUTJ0WMirs6MZXR9FNIfLqC4VDZg8=",
   "Source": "Streaming-service.API",
   "BasePath": "_content/Streaming-service.API",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\2hollis - jeans.mp3",
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\albumImages\\2.png",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
       "BasePath": "_content/Streaming-service.API",
-      "RelativePath": "Songs/2hollis - jeans.mp3",
+      "RelativePath": "albumImages/2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,15 +33,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Songs\\2hollis - jeans.mp3"
+      "OriginalItemSpec": "wwwroot\\albumImages\\2.png"
     },
     {
-      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\Платина feat. Feduk - Ламбо.mp3",
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\2hollis - jeans.mp3",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
       "BasePath": "_content/Streaming-service.API",
-      "RelativePath": "Songs/Платина feat. Feduk - Ламбо.mp3",
+      "RelativePath": "songs/2hollis - jeans.mp3",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -52,15 +52,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Songs\\Платина feat. Feduk - Ламбо.mp3"
+      "OriginalItemSpec": "wwwroot\\songs\\2hollis - jeans.mp3"
     },
     {
-      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\convolk - do 2 much.mp3",
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\Платина feat. Feduk - Ламбо.mp3",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
       "BasePath": "_content/Streaming-service.API",
-      "RelativePath": "Songs/convolk - do 2 much.mp3",
+      "RelativePath": "songs/Платина feat. Feduk - Ламбо.mp3",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,15 +71,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Songs\\convolk - do 2 much.mp3"
+      "OriginalItemSpec": "wwwroot\\songs\\Платина feat. Feduk - Ламбо.mp3"
     },
     {
-      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\convolk - medicine.mp3",
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\convolk - do 2 much.mp3",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
       "BasePath": "_content/Streaming-service.API",
-      "RelativePath": "Songs/convolk - medicine.mp3",
+      "RelativePath": "songs/convolk - do 2 much.mp3",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -90,15 +90,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Songs\\convolk - medicine.mp3"
+      "OriginalItemSpec": "wwwroot\\songs\\convolk - do 2 much.mp3"
     },
     {
-      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\convolk - swear to god.mp3",
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\convolk - medicine.mp3",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
       "BasePath": "_content/Streaming-service.API",
-      "RelativePath": "Songs/convolk - swear to god.mp3",
+      "RelativePath": "songs/convolk - medicine.mp3",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,15 +109,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Songs\\convolk - swear to god.mp3"
+      "OriginalItemSpec": "wwwroot\\songs\\convolk - medicine.mp3"
     },
     {
-      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\saluki - огней.mp3",
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\convolk - swear to god.mp3",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
       "BasePath": "_content/Streaming-service.API",
-      "RelativePath": "Songs/saluki - огней.mp3",
+      "RelativePath": "songs/convolk - swear to god.mp3",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,15 +128,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Songs\\saluki - огней.mp3"
+      "OriginalItemSpec": "wwwroot\\songs\\convolk - swear to god.mp3"
     },
     {
-      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\saluki, boulevard depo - brotha.mp3",
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\saluki - огней.mp3",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
       "BasePath": "_content/Streaming-service.API",
-      "RelativePath": "Songs/saluki, boulevard depo - brotha.mp3",
+      "RelativePath": "songs/saluki - огней.mp3",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,15 +147,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Songs\\saluki, boulevard depo - brotha.mp3"
+      "OriginalItemSpec": "wwwroot\\songs\\saluki - огней.mp3"
     },
     {
-      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\YUNGWAY - 1HP.mp3",
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\saluki, boulevard depo - brotha.mp3",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
       "BasePath": "_content/Streaming-service.API",
-      "RelativePath": "Songs/YUNGWAY - 1HP.mp3",
+      "RelativePath": "songs/saluki, boulevard depo - brotha.mp3",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -166,15 +166,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Songs\\YUNGWAY - 1HP.mp3"
+      "OriginalItemSpec": "wwwroot\\songs\\saluki, boulevard depo - brotha.mp3"
     },
     {
-      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\Songs\\YUNGWAY, OG Buda - Изобилие.mp3",
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\YUNGWAY - 1HP.mp3",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
       "BasePath": "_content/Streaming-service.API",
-      "RelativePath": "Songs/YUNGWAY, OG Buda - Изобилие.mp3",
+      "RelativePath": "songs/YUNGWAY - 1HP.mp3",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -185,7 +185,26 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Songs\\YUNGWAY, OG Buda - Изобилие.mp3"
+      "OriginalItemSpec": "wwwroot\\songs\\YUNGWAY - 1HP.mp3"
+    },
+    {
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\YUNGWAY, OG Buda - Изобилие.mp3",
+      "SourceId": "Streaming-service.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
+      "BasePath": "_content/Streaming-service.API",
+      "RelativePath": "songs/YUNGWAY, OG Buda - Изобилие.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\songs\\YUNGWAY, OG Buda - Изобилие.mp3"
     }
   ]
 }

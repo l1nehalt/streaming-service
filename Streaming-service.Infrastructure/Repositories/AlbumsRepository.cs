@@ -23,5 +23,17 @@ public class AlbumsRepository : IAlbumsRepository
         
         return albums;
     }
+
+    public async Task<Album?> GetById(int id)
+    {
+        var album = await _context.Albums
+            .Include(a => a.Artist)
+            .Include(a => a.Songs)
+            .FirstOrDefaultAsync(a => a.Id == id);
+        
+        if (album == null) return null;
+
+        return album;
+    }
     
 }
