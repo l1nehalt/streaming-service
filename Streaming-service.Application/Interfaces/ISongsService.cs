@@ -9,5 +9,9 @@ public interface ISongsService
     
     Task<List<AlbumResponse>> GetAlbumsAsync();
 
-    Task<AlbumResponse> GetAlbumByIdAsync(int albumId);
+    Task<AlbumResponse?> GetAlbumByIdAsync(int albumId);
+
+    Task<List<SongResponse>> GetSongsByArtistIdAsync(int artistId);
+    
+    Task<List<AlbumResponse>> GetAlbumsByArtistIdAsync(int artistId);
 }

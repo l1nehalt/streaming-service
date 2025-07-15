@@ -8,6 +8,8 @@ public class Artist
     
     public string ImagePath { get; set; } = string.Empty;
 
+    public List<SongFeaturingArtist> FeaturedInSongs { get; set; } = [];
+
     public List<Song>? Songs { get; set; } = [];
 
     public List<Album>? Albums { get; set; } = [];

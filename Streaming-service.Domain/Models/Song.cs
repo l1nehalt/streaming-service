@@ -9,9 +9,8 @@ public class Song
     public long ArtistId { get; set; }
     
     public string Title { get; set; } = string.Empty;
-    
-    public string FeaturingArtists { get; set; } = string.Empty;
-    
+
+    public List<SongFeaturingArtist> FeaturingArtists { get; set; } = [];
     public string FilePath { get; set; } = string.Empty;
     
     public string ImagePath { get; set; } = string.Empty;

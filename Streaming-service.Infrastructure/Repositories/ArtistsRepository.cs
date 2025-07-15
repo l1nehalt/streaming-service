@@ -19,4 +19,16 @@ public class ArtistsRepository : IArtistsRepository
         
         return artists;
     }
+
+    public async Task<Artist?> GetById(int id)
+    {
+        var artist = await _context.Artists
+            .Include(a => a.Albums)
+            .Include(a => a.Songs)
+            .ThenInclude(s => s.FeaturingArtists)
+            .ThenInclude(s => s.Artist)
+            .FirstOrDefaultAsync(a => a.Id == id);
+        
+        return artist;
+    }
 }

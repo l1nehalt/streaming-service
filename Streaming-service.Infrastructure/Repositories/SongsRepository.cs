@@ -18,6 +18,21 @@ public class SongsRepository : ISongsRepository
         var songs = await _context.Songs
             .Include(a => a.Artist)
             .Include(a => a.Album)
+            .Include(a => a.FeaturingArtists)
+            .ThenInclude(a => a.Artist)
+            .ToListAsync();
+        
+        return songs;
+    }
+
+    public async Task<List<Song>> GetByArtist(int artistId)
+    {
+        var songs = await _context.Songs
+            .Where(a => a.ArtistId == artistId)
+            .Include(a => a.Album)
+            .Include(a => a.Artist)
+            .Include(a => a.FeaturingArtists)
+            .ThenInclude(a => a.Artist)
             .ToListAsync();
         
         return songs;

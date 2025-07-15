@@ -2,8 +2,10 @@ namespace Streaming_service.Application.DTOs;
 
 public class AlbumResponse
 {
-    public long AlbumId { get; set; }
+    public long Id { get; set; }
     public string Title { get; set; } = string.Empty;
+    
+    public long ArtistId { get; set; }
 
     public string ArtistName { get; set; } = string.Empty;
 
@@ -13,5 +15,4 @@ public class AlbumResponse
     
     public string Error  { get; set; } = string.Empty;
 
-    public static AlbumResponse Failure(string error) => new AlbumResponse { Error = error };
 }

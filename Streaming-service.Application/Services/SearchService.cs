@@ -2,7 +2,6 @@ using FuzzySharp;
 using Streaming_service.Application.DTOs;
 using Streaming_service.Application.Interfaces;
 using Streaming_service.Domain.Abstractions;
-using Streaming_service.Domain.Models;
 
 
 namespace Streaming_service.Application.Services;
@@ -47,6 +46,7 @@ public class SearchService : ISearchService
                 Type = "Album",
                 Data = new AlbumResponse
                 {
+                    Id = bestAlbumMatch.Id,
                     Title = bestAlbumMatch.Title,
                     ArtistName = bestAlbumMatch.Artist.Name,
                     ImagePath = bestAlbumMatch.ImagePath,
@@ -55,6 +55,11 @@ public class SearchService : ISearchService
                         Title = songsResponse.Title,
                         AlbumTitle = bestAlbumMatch.Title,
                         ArtistName = bestAlbumMatch.Artist.Name,
+                        FeaturingArtists = songsResponse.FeaturingArtists.Select(fa => new ArtistResponse
+                        {
+                            Id = fa.ArtistId,
+                            Name = fa.Artist.Name
+                        }).ToList(),
                         ImagePath = songsResponse.ImagePath,
                         FilePath = songsResponse.FilePath,
                     }).ToList()
@@ -69,9 +74,14 @@ public class SearchService : ISearchService
                Type = "Song",
                Data = new SongResponse
                {
+                   Id = bestSongMatch.Id,
                    Title = bestSongMatch.Title,
                    ArtistName = bestSongMatch.Artist.Name,
-                   FeaturingArtist = bestSongMatch.FeaturingArtists,
+                   FeaturingArtists = bestSongMatch.FeaturingArtists.Select(fa => new ArtistResponse
+                   {
+                       Id = fa.ArtistId,
+                       Name = fa.Artist.Name
+                   }).ToList(),
                    FilePath = bestSongMatch.FilePath,
                    AlbumTitle = bestSongMatch.Album.Title,
                    ImagePath = bestSongMatch.ImagePath,
@@ -84,9 +94,10 @@ public class SearchService : ISearchService
             return new SearchResponse
             {
                 Type = "Artist",
-                Data = new ArtistsResponse
+                Data = new ArtistResponse
                 {
-                    ArtistName = bestArtistMatch.Name,
+                    Id = bestArtistMatch.Id,
+                    Name = bestArtistMatch.Name,
                     ImagePath = bestArtistMatch.ImagePath
                 }
             };

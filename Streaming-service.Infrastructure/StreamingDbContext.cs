@@ -19,6 +19,8 @@ public class StreamingDbContext : DbContext
     public DbSet<Song> Songs { get; set; }
     
     public DbSet<Favorite> Favorites { get; set; }
+    
+    public DbSet<SongFeaturingArtist> SongFeaturingArtists { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -60,6 +62,23 @@ public class StreamingDbContext : DbContext
             user.HasMany(s => s.Favorites)
                 .WithOne(f => f.User)
                 .HasForeignKey(f => f.UserId);
+        });
+        
+        modelBuilder.Entity<SongFeaturingArtist>()
+            .HasKey(sfa => new { sfa.SongId, sfa.ArtistId });
+
+        modelBuilder.Entity<SongFeaturingArtist>(song =>
+        {
+            song.HasOne(f => f.Song)
+                .WithMany(f => f.FeaturingArtists)
+                .HasForeignKey(f => f.SongId);
+        });
+
+        modelBuilder.Entity<SongFeaturingArtist>(artist =>
+        {
+            artist.HasOne(f => f.Artist)
+                .WithMany(f => f.FeaturedInSongs)
+                .HasForeignKey(f => f.ArtistId);
         });
     }
 }

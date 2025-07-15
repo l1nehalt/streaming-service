@@ -22,7 +22,7 @@ namespace Streaming_service.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.AlbumEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Album", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -51,7 +51,7 @@ namespace Streaming_service.Infrastructure.Migrations
                     b.ToTable("Albums");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.ArtistEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Artist", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -72,7 +72,7 @@ namespace Streaming_service.Infrastructure.Migrations
                     b.ToTable("Artists");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.FavoriteEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Favorite", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -95,7 +95,7 @@ namespace Streaming_service.Infrastructure.Migrations
                     b.ToTable("Favorites");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.SongEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Song", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -108,10 +108,6 @@ namespace Streaming_service.Infrastructure.Migrations
 
                     b.Property<long>("ArtistId")
                         .HasColumnType("bigint");
-
-                    b.Property<string>("FeaturingArtists")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<string>("FilePath")
                         .IsRequired()
@@ -137,7 +133,22 @@ namespace Streaming_service.Infrastructure.Migrations
                     b.ToTable("Songs");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.UserEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.SongFeaturingArtist", b =>
+                {
+                    b.Property<long>("SongId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ArtistId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("SongId", "ArtistId");
+
+                    b.HasIndex("ArtistId");
+
+                    b.ToTable("SongFeaturingArtists");
+                });
+
+            modelBuilder.Entity("Streaming_service.Domain.Models.User", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -158,75 +169,98 @@ namespace Streaming_service.Infrastructure.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.AlbumEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Album", b =>
                 {
-                    b.HasOne("Streaming_service.Infrastructure.Entities.ArtistEntity", "ArtistEntity")
-                        .WithMany("AlbumEntities")
+                    b.HasOne("Streaming_service.Domain.Models.Artist", "Artist")
+                        .WithMany("Albums")
                         .HasForeignKey("ArtistId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ArtistEntity");
+                    b.Navigation("Artist");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.FavoriteEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Favorite", b =>
                 {
-                    b.HasOne("Streaming_service.Infrastructure.Entities.SongEntity", "SongEntity")
-                        .WithMany("FavoritesEntities")
+                    b.HasOne("Streaming_service.Domain.Models.Song", "Song")
+                        .WithMany("Favorites")
                         .HasForeignKey("SongId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Streaming_service.Infrastructure.Entities.UserEntity", "UserEntity")
-                        .WithMany("FavoritesEntities")
+                    b.HasOne("Streaming_service.Domain.Models.User", "User")
+                        .WithMany("Favorites")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("SongEntity");
+                    b.Navigation("Song");
 
-                    b.Navigation("UserEntity");
+                    b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.SongEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Song", b =>
                 {
-                    b.HasOne("Streaming_service.Infrastructure.Entities.AlbumEntity", "AlbumEntity")
-                        .WithMany("SongEntities")
+                    b.HasOne("Streaming_service.Domain.Models.Album", "Album")
+                        .WithMany("Songs")
                         .HasForeignKey("AlbumId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Streaming_service.Infrastructure.Entities.ArtistEntity", "ArtistEntity")
-                        .WithMany("SongEntities")
+                    b.HasOne("Streaming_service.Domain.Models.Artist", "Artist")
+                        .WithMany("Songs")
                         .HasForeignKey("ArtistId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("AlbumEntity");
+                    b.Navigation("Album");
 
-                    b.Navigation("ArtistEntity");
+                    b.Navigation("Artist");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.AlbumEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.SongFeaturingArtist", b =>
                 {
-                    b.Navigation("SongEntities");
+                    b.HasOne("Streaming_service.Domain.Models.Artist", "Artist")
+                        .WithMany("FeaturedInSongs")
+                        .HasForeignKey("ArtistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Streaming_service.Domain.Models.Song", "Song")
+                        .WithMany("FeaturingArtists")
+                        .HasForeignKey("SongId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Artist");
+
+                    b.Navigation("Song");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.ArtistEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Album", b =>
                 {
-                    b.Navigation("AlbumEntities");
-
-                    b.Navigation("SongEntities");
+                    b.Navigation("Songs");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.SongEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Artist", b =>
                 {
-                    b.Navigation("FavoritesEntities");
+                    b.Navigation("Albums");
+
+                    b.Navigation("FeaturedInSongs");
+
+                    b.Navigation("Songs");
                 });
 
-            modelBuilder.Entity("Streaming_service.Infrastructure.Entities.UserEntity", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.Song", b =>
                 {
-                    b.Navigation("FavoritesEntities");
+                    b.Navigation("Favorites");
+
+                    b.Navigation("FeaturingArtists");
+                });
+
+            modelBuilder.Entity("Streaming_service.Domain.Models.User", b =>
+                {
+                    b.Navigation("Favorites");
                 });
 #pragma warning restore 612, 618
         }

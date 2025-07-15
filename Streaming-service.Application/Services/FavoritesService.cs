@@ -22,6 +22,7 @@ public class FavoritesService : IFavoritesService
         
         var listFavoritesResponse = favorites.Select(favoriteResponse => new FavoriteResponse
         {
+            Id = favoriteResponse.Id,
             SongTitle = favoriteResponse.Song.Title,
             AlbumTitle = favoriteResponse.Song.Album.Title
         }).ToList();
@@ -30,7 +31,7 @@ public class FavoritesService : IFavoritesService
     }
 
     public async Task<bool> AddFavoriteAsync(long userId, long songId)
-    { 
+    {
         return await _favoritesRepository.Add(userId, songId);
     }
 

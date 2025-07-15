@@ -4,13 +4,16 @@ namespace Streaming_service.Application.DTOs;
 
 public class SongResponse
 {
+    public long Id { get; set; }
     public string Title { get; set; } = string.Empty;
+    
+    public long ArtistId { get; set; }
     
     public string ArtistName { get; set; } = string.Empty;
     
     public string AlbumTitle { get; set; } = string.Empty;
-    
-    public string FeaturingArtist { get; set; } = string.Empty;
+
+    public List<ArtistResponse> FeaturingArtists { get; set; } = [];
     
     public string FilePath { get; set; } = string.Empty;
     
