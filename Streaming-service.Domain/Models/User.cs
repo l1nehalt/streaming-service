@@ -8,5 +8,7 @@ public class User
     
     public string Password { get; set; } = string.Empty;
 
-    public List<Favorite> Favorites { get; set; } = [];
+    public List<FavoriteSong> FavoriteSongs { get; set; } = [];
+    
+    public List<FavoriteAlbum> FavoriteAlbums { get; set; } = [];
 }

@@ -13,7 +13,7 @@ public class UserRepository : IUserRepository
         _context = context;
     }
 
-    public async Task<User?> CreateUser(User user)
+    public async Task<User?> Create(User user)
     {
         if (await _context.Users.AnyAsync(a => a.Username == user.Username))
         {
@@ -33,7 +33,7 @@ public class UserRepository : IUserRepository
         return BCrypt.Net.BCrypt.Verify(password, user.Password);
     }
 
-    public async Task<User?> GetUserByName(string username)
+    public async Task<User?> GetByName(string username)
     {
         var user = await _context.Users.FirstOrDefaultAsync(a => a.Username == username);
         

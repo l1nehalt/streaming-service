@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Fug4YsbcPetJEz9YQ+TV8Sz6P/W/LRu/zj4ZhEd/TWA=",
+  "Hash": "LY2BIluYo3Jzmnd/u1FlgItqqHPXHiNE4ci16ttmGc4=",
   "Source": "Streaming-service.API",
   "BasePath": "_content/Streaming-service.API",
   "Mode": "Default",
@@ -207,6 +207,25 @@
       "OriginalItemSpec": "wwwroot\\songImages\\poster boy.png"
     },
     {
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\231c0d2c-9c24-404b-8469-4f0d972b0493.mp3",
+      "SourceId": "Streaming-service.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
+      "BasePath": "_content/Streaming-service.API",
+      "RelativePath": "songs/231c0d2c-9c24-404b-8469-4f0d972b0493.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\songs\\231c0d2c-9c24-404b-8469-4f0d972b0493.mp3"
+    },
+    {
       "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\2hollis - burn.mp3",
       "SourceId": "Streaming-service.API",
       "SourceType": "Discovered",
@@ -262,6 +281,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\songs\\2hollis - poster boy.mp3"
+    },
+    {
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\30bcbcc0-43ca-4a99-b56c-6481e36aa2cd.mp3",
+      "SourceId": "Streaming-service.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
+      "BasePath": "_content/Streaming-service.API",
+      "RelativePath": "songs/30bcbcc0-43ca-4a99-b56c-6481e36aa2cd.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\songs\\30bcbcc0-43ca-4a99-b56c-6481e36aa2cd.mp3"
     },
     {
       "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\Платина feat. Feduk - Ламбо.mp3",
@@ -395,6 +433,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\songs\\YUNGWAY - 1HP.mp3"
+    },
+    {
+      "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\YUNGWAY - По-другому.mp3",
+      "SourceId": "Streaming-service.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\",
+      "BasePath": "_content/Streaming-service.API",
+      "RelativePath": "songs/YUNGWAY - По-другому.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\songs\\YUNGWAY - По-другому.mp3"
     },
     {
       "Identity": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\YUNGWAY, OG Buda - Изобилие.mp3",

@@ -1,3 +1,6 @@
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Streaming_service.Application.Interfaces;
 using streaming_service.Contracts;
@@ -57,5 +60,21 @@ public class AuthController : ControllerBase
         }
         
         return Ok(result);
+    }
+
+    [Authorize]
+    [HttpGet("self")]
+    public async Task<IActionResult> GetSelf()
+    {
+        var usernameClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+        if (usernameClaim == null)
+        {
+            return Unauthorized("username claim missing from token");
+        }
+        
+        var user = await _authService.GetUserProfile(usernameClaim);
+        
+        return Ok(user);
     }
 }

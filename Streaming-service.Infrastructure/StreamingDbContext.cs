@@ -18,21 +18,34 @@ public class StreamingDbContext : DbContext
     
     public DbSet<Song> Songs { get; set; }
     
-    public DbSet<Favorite> Favorites { get; set; }
+    public DbSet<FavoriteSong> FavoriteSongs { get; set; }
+    
+    public DbSet<FavoriteAlbum> FavoriteAlbums { get; set; }
     
     public DbSet<SongFeaturingArtist> SongFeaturingArtists { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Favorite>(favorite =>
+        modelBuilder.Entity<FavoriteSong>(favoriteSong =>
         {
-            favorite.HasOne(f => f.User)
-                .WithMany(f => f.Favorites)
+            favoriteSong.HasOne(f => f.User)
+                .WithMany(f => f.FavoriteSongs)
                 .HasForeignKey(f => f.UserId);
 
-            favorite.HasOne(f => f.Song)
-                .WithMany(f => f.Favorites)
+            favoriteSong.HasOne(f => f.Song)
+                .WithMany(f => f.FavoriteSongs)
                 .HasForeignKey(f => f.SongId);
+        });
+        
+        modelBuilder.Entity<FavoriteAlbum>(favoriteAlbum =>
+        {
+            favoriteAlbum.HasOne(f => f.User)
+                .WithMany(f => f.FavoriteAlbums)
+                .HasForeignKey(f => f.UserId);
+
+            favoriteAlbum.HasOne(f => f.Album)
+                .WithMany(f => f.FavoriteAlbums)
+                .HasForeignKey(f => f.AlbumId);
         });
 
         modelBuilder.Entity<Song>(song =>
@@ -59,7 +72,7 @@ public class StreamingDbContext : DbContext
 
         modelBuilder.Entity<User>(user =>
         {
-            user.HasMany(s => s.Favorites)
+            user.HasMany(s => s.FavoriteSongs)
                 .WithOne(f => f.User)
                 .HasForeignKey(f => f.UserId);
         });

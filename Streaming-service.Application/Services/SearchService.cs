@@ -8,24 +8,24 @@ namespace Streaming_service.Application.Services;
 
 public class SearchService : ISearchService
 {
-    private readonly ISongsRepository _songsRepository;
-    private readonly IAlbumsRepository _albumsRepository;
-    private readonly IArtistsRepository _artistsRepository;
+    private readonly ISongRepository _songRepository;
+    private readonly IAlbumRepository _albumRepository;
+    private readonly IArtistRepository _artistRepository;
     private const int MatchLimit = 60;
 
-    public SearchService(ISongsRepository songsRepository, IAlbumsRepository albumsRepository, 
-        IArtistsRepository artistsRepository)
+    public SearchService(ISongRepository songRepository, IAlbumRepository albumRepository, 
+        IArtistRepository artistRepository)
     {
-        _songsRepository = songsRepository;
-        _albumsRepository = albumsRepository;
-        _artistsRepository = artistsRepository;
+        _songRepository = songRepository;
+        _albumRepository = albumRepository;
+        _artistRepository = artistRepository;
     }
 
-    public async Task<SearchResponse?> SearchAsync(string query)
+    public async Task<SearchDto?> SearchAsync(string query)
     {
-        var albums = await _albumsRepository.Get();
-        var artists = await _artistsRepository.Get();
-        var songs = await _songsRepository.Get();
+        var albums = await _albumRepository.Get();
+        var artists = await _artistRepository.Get();
+        var songs = await _songRepository.Get();
         
         if (albums.Count == 0 || songs.Count == 0 || artists.Count == 0) return null;
         
@@ -41,21 +41,21 @@ public class SearchService : ISearchService
 
         if (albumScore > artistScore && albumScore > songScore && albumScore > MatchLimit)
         {
-            return new SearchResponse
+            return new SearchDto
             {
                 Type = "Album",
-                Data = new AlbumResponse
+                Data = new AlbumDto
                 {
                     Id = bestAlbumMatch.Id,
                     Title = bestAlbumMatch.Title,
                     ArtistName = bestAlbumMatch.Artist.Name,
                     ImagePath = bestAlbumMatch.ImagePath,
-                    Songs = bestAlbumMatch.Songs.Select(songsResponse => new SongResponse
+                    Songs = bestAlbumMatch.Songs.Select(songsResponse => new SongDto
                     {
                         Title = songsResponse.Title,
                         AlbumTitle = bestAlbumMatch.Title,
                         ArtistName = bestAlbumMatch.Artist.Name,
-                        FeaturingArtists = songsResponse.FeaturingArtists.Select(fa => new ArtistResponse
+                        FeaturingArtists = songsResponse.FeaturingArtists.Select(fa => new ArtistDto
                         {
                             Id = fa.ArtistId,
                             Name = fa.Artist.Name
@@ -69,15 +69,15 @@ public class SearchService : ISearchService
         
         if (songScore > albumScore && songScore > artistScore && songScore > MatchLimit)
         {
-            return new SearchResponse
+            return new SearchDto
             {
                Type = "Song",
-               Data = new SongResponse
+               Data = new SongDto
                {
                    Id = bestSongMatch.Id,
                    Title = bestSongMatch.Title,
                    ArtistName = bestSongMatch.Artist.Name,
-                   FeaturingArtists = bestSongMatch.FeaturingArtists.Select(fa => new ArtistResponse
+                   FeaturingArtists = bestSongMatch.FeaturingArtists.Select(fa => new ArtistDto
                    {
                        Id = fa.ArtistId,
                        Name = fa.Artist.Name
@@ -91,10 +91,10 @@ public class SearchService : ISearchService
 
         if (artistScore > songScore && artistScore > albumScore && artistScore > MatchLimit)
         {
-            return new SearchResponse
+            return new SearchDto
             {
                 Type = "Artist",
-                Data = new ArtistResponse
+                Data = new ArtistDto
                 {
                     Id = bestArtistMatch.Id,
                     Name = bestArtistMatch.Name,

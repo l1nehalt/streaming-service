@@ -10,9 +10,11 @@ public class Album
     
     public string ImagePath { get; set; } = string.Empty;
     
-    public string Title { get; set; } = string.Empty;
+    public string? Title { get; set; }
     
     public List<Song>? Songs { get; set; }
+
+    public List<FavoriteAlbum> FavoriteAlbums { get; set; } = null!;
     
     public Artist? Artist { get; set; }
 }

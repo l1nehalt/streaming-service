@@ -8,35 +8,50 @@ namespace Streaming_service.Application.Services;
 public class AuthService : IAuthService
 {
     private readonly IUserRepository _userRepository;
-    private readonly IJwtGenerator _jwtGenerator;
+    private readonly IJwtService _jwtService;
 
-    public AuthService(IUserRepository userRepository, IJwtGenerator jwtGenerator)
+    public AuthService(IUserRepository userRepository, IJwtService jwtService)
     {
         _userRepository = userRepository;
-        _jwtGenerator = jwtGenerator;
+        _jwtService = jwtService;
     }
 
-    public async Task<AuthResponse> RegisterAsync(User user)
+    public async Task<AuthDto> RegisterAsync(User user)
     {
-        if (await _userRepository.CreateUser(user) == null)
+        if (await _userRepository.Create(user) == null)
         {
-            return AuthResponse.Failure("Username is already taken");
+            return AuthDto.Failure("Username is already taken");
         }
         
-        return AuthResponse.Success(user);
+        return AuthDto.Success(user);
     }
 
-    public async Task<AuthResponse> LoginAsync(string username, string password)
+    public async Task<AuthDto> LoginAsync(string username, string password)
     {
-        var user = await _userRepository.GetUserByName(username);
+        var user = await _userRepository.GetByName(username);
 
         if (user == null || !await _userRepository.CheckPassword(user, password))
         {
-            return AuthResponse.Failure("Invalid username or password");
+            return AuthDto.Failure("Invalid username or password");
         }
         
-        var token = _jwtGenerator.JwtGenerate(user);
+        var token = _jwtService.JwtGenerate(user);
         
-        return AuthResponse.Success(user, token);
+        return AuthDto.Success(user, token);
+    }
+
+    public async Task<UserDto?> GetUserProfile(string username)
+    {
+        var user = await _userRepository.GetByName(username);
+
+        if (user == null) return null;
+
+        var result = new UserDto
+        {
+            Id = user.Id,
+            Name = user.Username
+        };
+        
+        return result;
     }
 }

@@ -4,5 +4,5 @@ namespace Streaming_service.Application.Interfaces;
 
 public interface ISearchService
 {
-    Task<SearchResponse?> SearchAsync(string query);
+    Task<SearchDto?> SearchAsync(string query);
 }

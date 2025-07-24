@@ -72,7 +72,30 @@ namespace Streaming_service.Infrastructure.Migrations
                     b.ToTable("Artists");
                 });
 
-            modelBuilder.Entity("Streaming_service.Domain.Models.Favorite", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.FavoriteAlbum", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("AlbumId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlbumId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("FavoriteAlbums");
+                });
+
+            modelBuilder.Entity("Streaming_service.Domain.Models.FavoriteSong", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -92,7 +115,7 @@ namespace Streaming_service.Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Favorites");
+                    b.ToTable("FavoriteSongs");
                 });
 
             modelBuilder.Entity("Streaming_service.Domain.Models.Song", b =>
@@ -180,16 +203,35 @@ namespace Streaming_service.Infrastructure.Migrations
                     b.Navigation("Artist");
                 });
 
-            modelBuilder.Entity("Streaming_service.Domain.Models.Favorite", b =>
+            modelBuilder.Entity("Streaming_service.Domain.Models.FavoriteAlbum", b =>
+                {
+                    b.HasOne("Streaming_service.Domain.Models.Album", "Album")
+                        .WithMany("FavoriteAlbums")
+                        .HasForeignKey("AlbumId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Streaming_service.Domain.Models.User", "User")
+                        .WithMany("FavoriteAlbums")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Album");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Streaming_service.Domain.Models.FavoriteSong", b =>
                 {
                     b.HasOne("Streaming_service.Domain.Models.Song", "Song")
-                        .WithMany("Favorites")
+                        .WithMany("FavoriteSongs")
                         .HasForeignKey("SongId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Streaming_service.Domain.Models.User", "User")
-                        .WithMany("Favorites")
+                        .WithMany("FavoriteSongs")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -239,6 +281,8 @@ namespace Streaming_service.Infrastructure.Migrations
 
             modelBuilder.Entity("Streaming_service.Domain.Models.Album", b =>
                 {
+                    b.Navigation("FavoriteAlbums");
+
                     b.Navigation("Songs");
                 });
 
@@ -253,14 +297,16 @@ namespace Streaming_service.Infrastructure.Migrations
 
             modelBuilder.Entity("Streaming_service.Domain.Models.Song", b =>
                 {
-                    b.Navigation("Favorites");
+                    b.Navigation("FavoriteSongs");
 
                     b.Navigation("FeaturingArtists");
                 });
 
             modelBuilder.Entity("Streaming_service.Domain.Models.User", b =>
                 {
-                    b.Navigation("Favorites");
+                    b.Navigation("FavoriteAlbums");
+
+                    b.Navigation("FavoriteSongs");
                 });
 #pragma warning restore 612, 618
         }

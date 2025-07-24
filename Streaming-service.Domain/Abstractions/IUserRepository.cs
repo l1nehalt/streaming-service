@@ -4,9 +4,9 @@ namespace Streaming_service.Domain.Abstractions;
 
 public interface IUserRepository
 {
-    Task<User?> CreateUser(User user);
+    Task<User?> Create(User user);
     
     Task<bool> CheckPassword(User user, string password);
     
-    Task<User?> GetUserByName(string username);
+    Task<User?> GetByName(string username);
 }

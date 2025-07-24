@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\songImages\\изобилие.png"
     },
     {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\231c0d2c-9c24-404b-8469-4f0d972b0493.mp3",
+      "PackagePath": "staticwebassets\\songs\\231c0d2c-9c24-404b-8469-4f0d972b0493.mp3"
+    },
+    {
       "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\2hollis - burn.mp3",
       "PackagePath": "staticwebassets\\songs\\2hollis - burn.mp3"
     },
@@ -53,8 +57,16 @@
       "PackagePath": "staticwebassets\\songs\\2hollis - poster boy.mp3"
     },
     {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\30bcbcc0-43ca-4a99-b56c-6481e36aa2cd.mp3",
+      "PackagePath": "staticwebassets\\songs\\30bcbcc0-43ca-4a99-b56c-6481e36aa2cd.mp3"
+    },
+    {
       "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\YUNGWAY - 1HP.mp3",
       "PackagePath": "staticwebassets\\songs\\YUNGWAY - 1HP.mp3"
+    },
+    {
+      "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\YUNGWAY - По-другому.mp3",
+      "PackagePath": "staticwebassets\\songs\\YUNGWAY - По-другому.mp3"
     },
     {
       "Id": "C:\\PROJECTS\\C#Projects\\Streaming-service\\Streaming-service.API\\wwwroot\\songs\\YUNGWAY, OG Buda - Изобилие.mp3",
